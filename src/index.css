@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '@fontsource/cairo/400.css';
+@import '@fontsource/cairo/700.css';
+
+:root {
+  font-family: 'Cairo', sans-serif;
+}
+
+body {
+  @apply bg-white min-h-screen flex flex-col;
+}
+
+#root {
+  @apply flex flex-col min-h-screen;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+.animate-pulse-custom {
+  animation: pulse 1s infinite;
+}
+
+.pixel-border {
+  box-shadow: 
+    3px 0 0 0 #000,
+    0 3px 0 0 #000,
+    3px 3px 0 0 #000,
+    3px 0 0 0 #000 inset,
+    0 3px 0 0 #000 inset;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.btn-red {
+  @apply bg-red-700 hover:bg-red-800 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 shadow-lg;
+}
+
+.card {
+  @apply bg-white rounded-lg shadow-md border-2 border-gray-200 p-4 transition-all duration-300;
+}
+
+.input-field {
+  @apply bg-white border-2 border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent;
+}
+
+.game-container {
+  @apply flex flex-col min-h-[80vh] justify-between;
+}
+
+.game-footer {
+  @apply mt-auto pt-4;
+}
+
+.page-container {
+  @apply flex flex-col min-h-[90vh] justify-between;
+}
+
+.player-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4;
+  min-height: 50vh;
+}
+
+.player-card {
+  @apply h-full flex flex-col justify-between;
+}
+
+.game-decoration {
+  @apply flex justify-center items-center py-4;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e02424' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}

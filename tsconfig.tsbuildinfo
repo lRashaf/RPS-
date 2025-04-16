@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/gamepage.tsx","./src/components/homepage.tsx","./src/components/playercard.tsx","./src/components/winnerscreen.tsx","./src/components/confetti.ts"],"version":"5.8.3"}
